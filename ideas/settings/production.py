@@ -35,8 +35,8 @@ ALLOWED_HOSTS = ['mentideas3.herokuapp.com']
 # DEFAULT_FROM_EMAIL = "Justin <hungrypy@gmail.com>"
 
 
-ADMINS = [('Justin', EMAIL_HOST_USER)]
-MANAGERS = ADMINS
+# ADMINS = [('Justin', EMAIL_HOST_USER)]
+# MANAGERS = ADMINS
 
 
 # Application definition
