@@ -1,0 +1,24 @@
+[
+{
+    "model": "pages.page",
+    "pk": 1,
+    "fields": {
+        "title": "KnockHQ",
+        "title_description": "Welcome and Join Us",
+        "title_btn": "Join",
+        "title_btn_url": "",
+        "content": "<div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n       </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>Heading</h2>\r\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\r\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\r\n        </div>\r\n      </div>"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 2,
+    "fields": {
+        "title": "KnockHQ2",
+        "title_description": "KnockHQ2",
+        "title_btn": "Join",
+        "title_btn_url": "",
+        "content": "<div class=\"row marketing\">\r\n        <div class=\"col-lg-6\">\r\n          <h4>Subheading</h4>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>\r\n\r\n          <h4>Subheading</h4>\r\n          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>\r\n\r\n          <h4>Subheading</h4>\r\n          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>\r\n        </div>\r\n\r\n        <div class=\"col-lg-6\">\r\n          <h4>Subheading</h4>\r\n          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>\r\n\r\n          <h4>Subheading</h4>\r\n          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>\r\n\r\n          <h4>Subheading</h4>\r\n          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>\r\n        </div>\r\n      </div>"
+    }
+}
+]

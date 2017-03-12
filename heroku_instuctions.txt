@@ -1,0 +1,48 @@
+pip freeze > requirements.txt
+
+Create Procfile
+
+web: gunicorn gettingstarted.wsgi --log-file -
+
+Create runtime.txt
+
+python-3.5.1
+
+
+git add .
+git commit -m "Added a Proc file"
+heroku login
+heroku create bj3ideas
+git push heroku master
+
+heroku config:set DISABLE_COLLECTSTATIC=1
+git push heroku master
+
+https://bj3ideas.herokuapp.com/
+
+
+heroku run bash
+
+heroku addons:create heroku-postgresql:hobby-dev
+
+production.py 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+import dj_database_url
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env
+
+git add .
+git commit -m "Update for db"
+
+heroku run python manage.py migrate
+
+
+pip install whitenoise
