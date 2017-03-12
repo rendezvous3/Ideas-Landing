@@ -56,6 +56,15 @@ python manage.py loaddata pages.json
 exit;
 
 
+-Locally
+python manage.py runserver
+
+Added something in admin then
+
+-Push Data
+python manage.py dumpdata pages.Page --format json --indent 4 > pages.json
+
+
 
 
 
