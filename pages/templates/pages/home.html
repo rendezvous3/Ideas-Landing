@@ -64,19 +64,32 @@
     </nav>
 
     <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Join Us</h2>
-          <p>
-            <form method="POST" action=""> {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Join" class="btn btn-default">
-            </form>
-          </p>
-          </div> 
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="row">
+            <div class="col-xs-4">
+              <h2>Join Us</h2>
+            </div> 
+            <div class="col-xs-8">  
+              <p>
+                <form method="POST" action=""> {% csrf_token %}
+                <!-- {{ form.as_p }} -->
+                <div class="input-group">
+                  <input type="email" type="email" placeholder="Your Email" class="form-control">
+                  <span class="input-group-btn">
+                    <input type="submit" value="Join" class="btn btn-default">
+                  </span>
+                </div>
+                </form>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
       <hr>
+
       <div class="container">
         {{ page_obj.content|safe }}
       </div>

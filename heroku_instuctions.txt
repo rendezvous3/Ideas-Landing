@@ -46,3 +46,16 @@ heroku run python manage.py migrate
 
 
 pip install whitenoise
+
+heroku bash
+
+python manage.py dumpdata pages.Page --format json --indent 4 > pages.json
+
+python manage.py loaddata pages.json
+
+exit;
+
+
+
+
+
