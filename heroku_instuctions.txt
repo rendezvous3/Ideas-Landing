@@ -68,6 +68,15 @@ git push heroku master
 
 heroku run python manage.py loaddata pages.json
 
+-Applying migrations
+
+heroku run python manage.py migrate
+
+
+Whenever we want local server data to get pushed to hosting heroku cloud
+
+python manage.py dumpdata pages.Page --foat json --indent 4 > pages.json
+
 
 
 
