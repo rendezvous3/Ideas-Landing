@@ -64,6 +64,10 @@ Added something in admin then
 -Push Data
 python manage.py dumpdata pages.Page --format json --indent 4 > pages.json
 
+git push heroku master
+
+heroku run python manage.py loaddata pages.json
+
 
 
 
