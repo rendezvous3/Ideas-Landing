@@ -29,9 +29,7 @@
       {% include 'pages/snippet/stacked-layout.html' with page_obj=page_obj form=form %}
     {% else %}
       {% include 'pages/snippet/standard-layout.html' with page_obj=page_obj form=form %}
-    {% endif %}
-
-    <a href="{% url 'api-email-join' %}">api join</a> 
+    {% endif %} 
 
 {% endblock content %}
 
