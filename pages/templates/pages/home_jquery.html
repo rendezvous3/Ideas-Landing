@@ -1,0 +1,26 @@
+<script>
+$(document).ready(function(){
+	$(".join-form").submit(function(e){
+		e.preventDefault();
+		console.log($(this).serialize())
+		//var joinEmailAPIEndpoint = "/api/email/join/";
+		var joinEmailAPIEndpoint = "{% url 'api-email-join' %}";
+		$.ajax({
+			method: "POST",
+			data:   $(this).serialize(),
+			url: joinEmailAPIEndpoint,
+			success: function(data){
+				console.log(data)
+				//$(this).fadeOut();
+				$(".join-form").parent().html("<p class='lead'>Success! Thanks for joining</p>")
+			},
+			error: function(data){
+				//console.log("error")
+				//console.log(data)
+				$(".join-form-alert").fadeIn();
+				$(".join-form-error").text(data.responseJSON.email[0])
+			}
+		})
+	});
+});
+</script>

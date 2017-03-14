@@ -1,0 +1,62 @@
+// http://www.django-rest-framework.org/tutorial/quickstart/
+// http://www.django-rest-framework.org/api-guide/validators/
+// http://www.django-rest-framework.org/api-guide/serializers/ Command F validate
+// http://www.django-rest-framework.org/api-guide/generic-views/
+// http://www.django-rest-framework.org/api-guide/generic-views/#createapiview
+
+
+pip install djangorestframework
+
+base, local, production
+
+INSTALLED_APPS = [
+	'rest_framework',
+]
+
+newsletter -> new module -> api -> __init__.py
+
+serailizers.py -> similar to forms.py
+
+from rest_framework import serializers
+
+from newsletter.models import Join
+
+class JoinSerializer(serializers.ModelSerializer):
+	class Meta:
+		model  = Join
+		fields = ['email']
+
+	def validate_email(self, value):
+		email = value
+		qs    = Join.objects.filter(email__iexact=email)
+		if qs.exists():
+			raise serializers.ValidationError("This email already exists.")
+		return email
+
+views.py
+
+from rest_framework import generics
+
+from newsletter.models import Join
+from .serializers import JoinSerializer
+
+class JoinCreateAPIView(generics.CreateAPIView):
+	queryset            	= Join.objects.all()
+	serializer_class    	= JoinSerializer
+	permisssion_classes 	= []
+	authentication_classes 	= []
+
+urls.py
+
+from newsletter.api.views import JoinCreateAPIView
+from pages.views import HomeView
+
+
+urlpatterns = [
+	url(r'^$', HomeView.as_view(), name="home"),
+    url(r'^admin/', admin.site.urls),
+    url(r'^api/email/join/$', JoinCreateAPIView.as_view(), name="api-email-join"),	
+]
+
+
+
