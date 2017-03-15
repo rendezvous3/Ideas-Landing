@@ -1,5 +1,18 @@
 <script>
 $(document).ready(function(){
+	var $marketingModal = $("#signUpModal");
+	var didDismissModal = false;
+
+	$("body").mouseleave(function(){
+		if (!didDismissModal) {
+		$marketingModal.modal()
+		}
+	});
+
+	$marketingModal.on("hidden.bs.modal", function(e){
+		didDismissModal = true;
+	})
+
 	$(".join-form").submit(function(e){
 		e.preventDefault();
 		console.log($(this).serialize())
@@ -10,8 +23,8 @@ $(document).ready(function(){
 			data:   $(this).serialize(),
 			url: joinEmailAPIEndpoint,
 			success: function(data){
-				console.log(data)
-				//$(this).fadeOut();
+				didDismissModal = true;
+				$marketingModal.modal('hide')
 				$(".join-form").parent().html("<p class='lead'>Success! Thanks for joining</p>")
 			},
 			error: function(data){
