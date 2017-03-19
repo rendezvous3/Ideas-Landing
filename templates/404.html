@@ -1,9 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'error_base.html' %}
 
-{% block content %}
-<div class="row">
-	<div class="col-sm-6 col-sm-offset-3 text-center">
-		<h3>404 Page Not Found</h3>
-	</div>
-</div>
-{% endblock content %}
+{% block title %} 404 Error | {{ block.super }} {% endblock title %}
+
+{% block error_title %} (404) Error {% endblock %}
+
+{% block error_description %} Page not found. {% endblock %}
