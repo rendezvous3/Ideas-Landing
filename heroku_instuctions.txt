@@ -75,7 +75,7 @@ heroku run python manage.py migrate
 
 Whenever we want local server data to get pushed to hosting heroku cloud
 
-python manage.py dumpdata pages.Page --foat json --indent 4 > pages.json
+python manage.py dumpdata pages.Page --format json --indent 4 > pages.json
 
 -After running migrations
 

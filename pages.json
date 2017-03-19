@@ -13,8 +13,9 @@
         "layout": "standard",
         "video_embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vqhDkP-Je3E?ecver=1\" frameborder=\"0\" allowfullscreen></iframe>",
         "slug": "knockhq-again",
-        "featured": false,
-        "active": true
+        "featured": true,
+        "active": true,
+        "leave_capture": true
     }
 },
 {
@@ -31,8 +32,9 @@
         "layout": "standard",
         "video_embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vqhDkP-Je3E?ecver=1\" frameborder=\"0\" allowfullscreen></iframe>",
         "slug": "knockhq2",
-        "featured": true,
-        "active": true
+        "featured": false,
+        "active": true,
+        "leave_capture": true
     }
 }
 ]
