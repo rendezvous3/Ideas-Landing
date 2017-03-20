@@ -1,4 +1,4 @@
-<form class="join-form" method="POST" action=""> {% csrf_token %}
+<form class="join-form form-inline text-center" method="POST" action=""> {% csrf_token %}
     <div class="alert alert-danger alert-dismissible join-form-alert" style="display:none">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <span class="join-form-error"></span>
@@ -9,6 +9,11 @@
             {{ form.non_field_errors }}
         </div>
     {% endif %}
+    <div class="input-group">
+        <label style="padding: 0px 20px;font-size: 20px; color:white;">
+            Join Us
+        </label>
+    </div>
     {% for field in form %}
         {% if field.errors %}
             <div class="alert alert-warning alert-dismissible">
@@ -18,9 +23,10 @@
         {% endif %}
         <div class="input-group">
         {{ field }}
-        <span class="input-group-btn">
-        <input type="submit" value="Join" class="btn btn-default">
-        </span>
+        <div class="input-group-addon" style="background-color: #fff; border-left: 0px;">
+            <i class="fa fa-envelope"></i>
+        </div>
         </div>
     {% endfor %}
+    <input type="submit" value="Join" class="btn btn-primary">
 </form>

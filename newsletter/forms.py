@@ -5,7 +5,7 @@ from .models import Join
 class JoinForm(forms.ModelForm):
 	email = forms.EmailField(label='',
 	 widget=forms.EmailInput(attrs={'placeholder': 'Your Email',
-	 								'class': 'form-control'}))
+	 								'class': 'form-control sign-up-email-form'}))
 
 	class Meta:
 		model = Join
