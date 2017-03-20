@@ -84,6 +84,20 @@ git push heroku master && heroku run python manage.py migrate
 
 https://www.codingforentrepreneurs.com/blog/a-unique-slug-generator-for-django/
 
+IMPORTANT:
+	Because Heroku collects static by default, whenever we git heroku push master
+	which can cause errors we disable that feature by typing:
+		#disable collectstatic
+		heroku config:set DISABLE_COLLECTSTATIC=1
+	When we want to push static files from our local server to heroku cloud:
+		1. #enable collectstatic (if needed)
+			heroku config:set DISABLE_COLLECTSTATIC=0
+		2. Run collectstatic locally:
+			python manage.py collectstatic
+		3. Commit:		
+			git add --all
+			git commit -m "Update Django for whitenoise static"
+			git push heroku master
 
 
 
