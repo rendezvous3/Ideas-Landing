@@ -15,6 +15,12 @@
       padding-bottom: 0px;
     }
   {% endif %}
+
+  .jumbotron {
+    background-color: {{ object.jumbotron_bg_color }} !important;
+    color: {{ object.jumbotron_text_color }} !important;
+  }
+
 {% endblock styles %}
 </style>
 
@@ -32,7 +38,7 @@
     {% endif %} 
 
     {% if object.leave_capture %}
-    <span class="leave-capture" show='true'></span>
+      <span class="leave-capture" show='true'></span>
     {% endif %}
 
 {% endblock content %}
